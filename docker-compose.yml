@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    build: ./web/
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./web:/code
+    command: django-admin  startproject mysite .
+
+#python manage.py runserver 0.0.0.0:8000
+
+
+#docker-compose build
+#docker-compose up
